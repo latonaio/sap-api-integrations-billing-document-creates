@@ -1,5 +1,4 @@
 # sap-api-integrations-creates  
-sap-api-integrations-creates は、他のすべての sap-api-integrations-creates 作成更新の際の 参照元となる マスタレポジトリです。  
 sap-api-integrations-creates は、外部システム(特にエッジコンピューティング環境)をSAPと統合することを目的に、SAP API で 請求伝票データ を登録するマイクロサービスです。  
 sap-api-integrations-creates には、サンプルのAPI Json フォーマットが含まれています。  
 sap-api-integrations-creates は、オンプレミス版である（＝クラウド版ではない）SAPS4HANA API の利用を前提としています。クラウド版APIを利用する場合は、ご注意ください。  
@@ -40,7 +39,7 @@ accepter において 下記の例のように、データの種別（＝APIの�
 ここでは、"Header" が指定されています。    
   
 ```
-"api_schema": "SAPBillingDocumentCreate",
+"api_schema": "SAPBillingDocumentCreates",
 "accepter": ["Header"],
 "billing_document_no": "",
 "deleted": false
@@ -51,7 +50,7 @@ accepter において 下記の例のように、データの種別（＝APIの�
 全データを取得する場合、sample.json は以下のように記載します。  
 
 ```
-"api_schema": "SAPBillingDocumentCreate",
+"api_schema": "SAPBillingDocumentCreates",
 "accepter": ["All"],
 "billing_document_no": "",
 "deleted": false
