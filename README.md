@@ -1,11 +1,11 @@
-# sap-api-integrations-creates  
-sap-api-integrations-creates は、外部システム(特にエッジコンピューティング環境)をSAPと統合することを目的に、SAP API で 請求伝票データ を登録するマイクロサービスです。  
-sap-api-integrations-creates には、サンプルのAPI Json フォーマットが含まれています。  
-sap-api-integrations-creates は、オンプレミス版である（＝クラウド版ではない）SAPS4HANA API の利用を前提としています。クラウド版APIを利用する場合は、ご注意ください。  
+# sap-api-integrations-billing-document-creates  
+sap-api-integrations-billing-document-creates は、外部システム(特にエッジコンピューティング環境)をSAPと統合することを目的に、SAP API で 請求伝票データ を登録するマイクロサービスです。  
+sap-api-integrations-billing-document-creates には、サンプルのAPI Json フォーマットが含まれています。  
+sap-api-integrations-billing-document-creates は、オンプレミス版である（＝クラウド版ではない）SAPS4HANA API の利用を前提としています。クラウド版APIを利用する場合は、ご注意ください。  
 https://api.sap.com/api/OP_API_BILLING_DOCUMENT_SRV_0001/overview  
 
 ## 動作環境  
-sap-api-integrations-creates は、主にエッジコンピューティング環境における動作にフォーカスしています。  
+sap-api-integrations-billing-document-creates は、主にエッジコンピューティング環境における動作にフォーカスしています。  
 使用する際は、事前に下記の通り エッジコンピューティングの動作環境（推奨/必須）を用意してください。  
 ・ エッジ Kubernetes （推奨）   
 ・ AION のリソース （推奨)   
@@ -13,17 +13,17 @@ sap-api-integrations-creates は、主にエッジコンピューティング環
 ・ CPU: ARM/AMD/Intel（いずれか必須）  
 
 ## クラウド環境での利用
-sap-api-integrations-creates は、外部システムがクラウド環境である場合にSAPと統合するときにおいても、利用可能なように設計されています。
+sap-api-integrations-billing-document-creates は、外部システムがクラウド環境である場合にSAPと統合するときにおいても、利用可能なように設計されています。
 
 
 ## 本レポジトリ が 対応する API サービス
-sap-api-integrations-creates が対応する APIサービス は、次のものです。
+sap-api-integrations-billing-document-creates が対応する APIサービス は、次のものです。
 
 * APIサービス概要説明 URL: https://api.sap.com/api/OP_API_BILLING_DOCUMENT_SRV_0001/overview  
 * APIサービス名(=baseURL): API_BILLING_DOCUMENT_SRV
 
 ## 本レポジトリ に 含まれる API名
-sap-api-integrations-creates には、次の API をコールするためのリソースが含まれています。  
+sap-api-integrations-billing-document-creates には、次の API をコールするためのリソースが含まれています。  
 
 * A_BillingDocument（請求伝票 - ヘッダ）※請求伝票の詳細データを取得するために、ToItem、と合わせて利用されます。
 * ToItem（請求伝票 - 明細 ※To）
@@ -94,8 +94,8 @@ func (c *SAPAPICaller) AsyncPostBillingDocument(
 以下の項目のうち、"XXXXX" ～ "XXXXX" は、/SAP_API_Output_Formatter/type.go 内 の Type Header {} による出力結果です。"cursor" ～ "time"は、golang-logging-library による 定型フォーマットの出力結果です。  
 
 ```
-	"cursor": "/Users/latona2/bitbucket/sap-api-integrations-creates/SAP_API_Caller/caller.go#L50",
-	"function": "sap-api-integrations-creates/SAP_API_Caller.(*SAPAPICaller).Header",
+	"cursor": "/Users/latona2/bitbucket/sap-api-integrations-billing-document-creates/SAP_API_Caller/caller.go#L50",
+	"function": "sap-api-integrations-billing-document-creates/SAP_API_Caller.(*SAPAPICaller).Header",
 	"level": "INFO",
 	"message": "[{XXXXXXXXXXXXXXXXXXXXXXXXXXXXX}]",
 	"time": "2021-12-11T15:33:00.054455+09:00"
